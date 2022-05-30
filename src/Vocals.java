@@ -9,11 +9,10 @@ public class Vocals {
         String[] vocals = new String[]{"a", "e", "i", "o", "u"};
 
         System.out.println("Digues una frase");
-        String frase;
+        String frase = sc.nextLine();
 
-        for (int i = 0; i < vocals.length; i++) {
-            frase = sc.nextLine();
-            String fraseConvertida = frase.replace("a", vocals[i]).replace("e", vocals[i]).replace("i", vocals[i]).replace("o", vocals[i]).replace("u", vocals[i]);
+        for (String vocal : vocals) {
+            String fraseConvertida = frase.replace("a", vocal).replace("e", vocal).replace("i", vocal).replace("o", vocal).replace("u", vocal);
             System.out.println(fraseConvertida);
         }
 
